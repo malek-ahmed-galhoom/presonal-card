@@ -1,0 +1,160 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* End Css Reset */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5e5f7;
+  background-image: radial-gradient(
+    #444cf7 0.6000000000000001px,
+    #e5e5f7 0.6000000000000001px
+  );
+  background-size: 1.2rem 1.2rem;
+}
+
+.lights-control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  top: 2rem;
+}
+
+.light-label {
+  width: 4.2rem;
+  height: 2.2rem;
+  border-radius: 1.5rem;
+  background-color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 0.3rem 0.4rem;
+}
+
+.light-label::after {
+  content: "";
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.lights-input {
+  display: none;
+}
+
+.lights-input:checked +.light-label {
+  background-color: #fff;
+}
+
+.lights-input:checked +.light-label::after {
+  transform: translateX(2.1rem);
+  background-color: green;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  min-width: 35rem;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.top {
+  height: 10rem;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image:
+    repeating-radial-gradient(circle at 0 0, transparent 0, #e5e5f7 1rem),
+    repeating-linear-gradient(#444cf755, #444cf7);
+}
+
+.middle {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -6rem;
+  z-index: 1;
+}
+
+.pic {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  border: 0.4rem solid #fff;
+}
+
+.title {
+  font-size: 2.2rem;
+}
+
+.job {
+  font-size: 1.6rem;
+}
+
+.bottom {
+  display: flex;
+  margin-top: 3rem;
+  border-top: 0.1rem solid #c4c4c4;
+}
+
+.column {
+  flex: 1;
+  padding: 1.8rem 1.5rem;
+  text-align: center;
+}
+
+.column:nth-child(2) {
+  border-right: 0.1rem solid #c4c4c4;
+  border-left: 0.1rem solid #c4c4c4;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.username {
+  font-size: 1.2rem;
+}
